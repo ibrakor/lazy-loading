@@ -2,17 +2,22 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import {EuropaComponent} from "./europa.component";
 import {AmericaComponent} from "../america/america.component";
+import {EspanaComponent} from "./espana/espana.component";
+import {FranciaComponent} from "./francia/francia.component";
+import {ItaliaComponent} from "./italia/italia.component";
 
 const routes: Routes = [
   {
-    path: 'america',
-    component: AmericaComponent,
-    loadChildren: () => import('../america/america.module').then(m => m.AmericaModule)
+    path: 'espana',
+    component: EspanaComponent
   },
   {
-    path: 'europa',
-    component: EuropaComponent,
-    loadChildren: () => import('../europa/europa.module').then(m => m.EuropaModule)
+    path: 'francia',
+    component: FranciaComponent
+  },
+  {
+    path: 'italia',
+    component: ItaliaComponent
   }
 ];
 
